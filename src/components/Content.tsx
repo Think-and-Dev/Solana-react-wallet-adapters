@@ -1,10 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { FC, useEffect } from 'react';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { useWalletProvider } from '../contexts/wallet';
 
 const Content: FC = () => {
     const connection = useConnection();
-    const { publicKey, sendTransaction, connected } = useWallet();
+    const { publicKey, connected } = useWallet();
     const { network } = useWalletProvider();
 
     useEffect(() => {
